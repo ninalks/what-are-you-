@@ -1,0 +1,102 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta http-equiv="Content-Style-Type" content="text/css">
+  <title></title>
+  <meta name="Generator" content="Cocoa HTML Writer">
+  <meta name="CocoaVersion" content="2487.6">
+  <style type="text/css">
+    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica}
+    p.p2 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica; min-height: 14.0px}
+  </style>
+</head>
+<body>
+<p class="p1">&lt;!DOCTYPE html&gt;</p>
+<p class="p1">&lt;html lang="en"&gt;</p>
+<p class="p1">&lt;head&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;meta charset="UTF-8"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;title&gt;What Are You?&lt;/title&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;style&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>body {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>background: url('https://upload.wikimedia.org/wikipedia/en/6/68/Bliss_%28Windows_XP%29.png') no-repeat center center fixed;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>background-size: cover;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>font-family: Arial, sans-serif;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>display: flex;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>justify-content: center;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>align-items: center;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>height: 100vh;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p1"><span class="Apple-converted-space">        </span>.window {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>width: 400px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>background: #c0c0c0;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>border: 3px solid #000;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>box-shadow: 5px 5px 0px #555;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p1"><span class="Apple-converted-space">        </span>.title-bar {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>background: navy;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>color: white;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>padding: 5px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>font-weight: bold;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p1"><span class="Apple-converted-space">        </span>.content {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>padding: 15px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>text-align: center;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p1"><span class="Apple-converted-space">        </span>button {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>background: #c0c0c0;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>border: 2px solid #000;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>padding: 5px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>cursor: pointer;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/style&gt;</p>
+<p class="p1">&lt;/head&gt;</p>
+<p class="p1">&lt;body&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="window"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="title-bar"&gt;What Are You?&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="content"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;p id="answer"&gt;Click below to find out!&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;button onclick="generateAnswer()"&gt;What are you?&lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;audio id="sound" src="https://www.myinstants.com/media/sounds/vine-boom.mp3"&gt;&lt;/audio&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;script&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>const answers = [</p>
+<p class="p1"><span class="Apple-converted-space">            </span>"PART-TIME CAKE ADDICT.", "FULL-TIME FAIRY.", "THE SECOND ELDEST IMMIGRANT DAUGHTER.",<span class="Apple-converted-space"> </span></p>
+<p class="p1"><span class="Apple-converted-space">            </span>"DRAMATIC SIGHER.", "VILLAIN SYMPATHIZER AS LONG AS THEY HAVE A GOOD STYLE.",<span class="Apple-converted-space"> </span></p>
+<p class="p1"><span class="Apple-converted-space">            </span>"CITIZEN OF THE WORLD.", "AMATEUR TENNIS PLAYER.", "UNFINISHED BOOK COLLECTOR.",<span class="Apple-converted-space"> </span></p>
+<p class="p1"><span class="Apple-converted-space">            </span>"WOULD PRESS THE BIG RED BUTTON JUST TO SEE WHAT HAPPENS.", "SCOLIOSIS SURVIVOR.",<span class="Apple-converted-space"> </span></p>
+<p class="p1"><span class="Apple-converted-space">            </span>"ONE DIRECTION-ER (RIP LIAM).", "EMOTIONALLY UNAVAILABLE SISTER.", "ALWAYS ON TIME.",<span class="Apple-converted-space"> </span></p>
+<p class="p1"><span class="Apple-converted-space">            </span>"MISSPRONOUNCER OF 'QUINOA' UNTIL 2019.", "UNEMPLOYED.", "A SEAT FILLER AT FAMILY GATHERINGS.",<span class="Apple-converted-space"> </span></p>
+<p class="p1"><span class="Apple-converted-space">            </span>"DOECHII FAN.", "EQUAL LAYERS ON A SANDWICH STAN.", "AMATEUR DRAGON RIDER.",<span class="Apple-converted-space"> </span></p>
+<p class="p1"><span class="Apple-converted-space">            </span>"DONALD TRUMP HATER.", "SOCIAL BUTTERFLY WITH AN EXPIRATION DATE.",<span class="Apple-converted-space"> </span></p>
+<p class="p1"><span class="Apple-converted-space">            </span>"UNSURE IF I WANT TO HAVE KIDS JUST BECAUSE I HAVE A WOMB IT IS EXPECTED OF ME OR BECAUSE I CAN SEE MYSELF AS A MOTHER.",<span class="Apple-converted-space"> </span></p>
+<p class="p1"><span class="Apple-converted-space">            </span>"STILL WAITING FOR MY INVITE TO CAMP ROCK.", "WHIMSICAL KEEPER OF EVERY SINGLE STORY I’VE EVER READ.",<span class="Apple-converted-space"> </span></p>
+<p class="p1"><span class="Apple-converted-space">            </span>"THIRD CULTURE KID ALWAYS BATTLING THE QUESTION 'WHERE ARE YOU FROM?'.",<span class="Apple-converted-space"> </span></p>
+<p class="p1"><span class="Apple-converted-space">            </span>"ONCE CRIED OVER A FICTIONAL CHARACTER’S DEATH FOR THREE DAYS (RIP MCDREAMY YOU WILL LIVE FOREVER IN MY HEART).",</p>
+<p class="p1"><span class="Apple-converted-space">            </span>"IN DENIAL OF HOW EXPENSIVE LITTLE MOONS ARE.", "OWNER OF A DRAWER FULL OF VIBRATORS BECAUSE WOMEN DESERVE TO EXPERIMENT.",</p>
+<p class="p1"><span class="Apple-converted-space">            </span>"GUILTY OF 'WE SHOULD START A PODCAST' AFTER A YAPP SESSION.", "SCARED OF DISAPPOINTING PEOPLE WHO GIVE ME EVERYTHING TO LIVE FOR.",</p>
+<p class="p1"><span class="Apple-converted-space">            </span>"IN MOURNING AFTER DISNEY CHANNEL SHUT DOWN AFTER 27 YEARS.", "CONVINCED CAFE CULTURE IN SERBIA IS THE REASON EVERYONE DIES OF LUNG CANCER.",</p>
+<p class="p1"><span class="Apple-converted-space">            </span>"WRITER OF SAKURA X KAKASHI FANFICTION.", "BEDRUDNGLY DEPENDED ON THESAURUS.",</p>
+<p class="p1"><span class="Apple-converted-space">            </span>"HOPEFUL MY DOG REACHES 20 YEARS OF LIFE.", "NEVER ENOUGH IN MOM’S EYES.",<span class="Apple-converted-space"> </span></p>
+<p class="p1"><span class="Apple-converted-space">            </span>"JUSTICE WARRIOR FOR THE LEMONADE MOUTH SEQUEL WE NEVER GOT.", "OCCASIONALLY STUCK IN MY ADHD PARALYSIS.",</p>
+<p class="p1"><span class="Apple-converted-space">            </span>"MEMORY PALACE BUILDER.", "HAPPY I DIDN’T LET MY INNER DEPRESSION DEMON DRAG ME TO THE BOTTOM OF THE BRIDGE.",</p>
+<p class="p1"><span class="Apple-converted-space">            </span>"THE OG WATTPAD ZEALOT BEFORE THE ADS ERA.", "UNIRONICALLY WATCHING XO, KITTY THREE TIMES IN A ROW.",</p>
+<p class="p1"><span class="Apple-converted-space">            </span>"SEEKER OF MAKO ISLAND.", "COLLECTOR OF QUOTES LIKE CARRIE BRADSHAW COLLECTS REGRETS.",</p>
+<p class="p1"><span class="Apple-converted-space">            </span>"MEMBER OF 'I WILL READ A NEW BOOK IN A DAY AND THEN OBSESSIVELY WATCH EVERY SINGLE PIECE OF CONTENT MADE ABOUT IT' CLUB.",</p>
+<p class="p1"><span class="Apple-converted-space">            </span>"FOREVER LAUGHING WHENEVER I SEE A KID TRIP OVER.",</p>
+<p class="p1"><span class="Apple-converted-space">            </span>"AND…DARE I SAY IT? A MISFIT. A WEIRDO. CREATIVE CHALLENGED….A KENNEDY?"</p>
+<p class="p1"><span class="Apple-converted-space">        </span>];</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>let index = 0;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>function generateAnswer() {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>document.getElementById("answer").textContent = answers[index];</p>
+<p class="p1"><span class="Apple-converted-space">            </span>document.getElementById("sound").play();</p>
+<p class="p1"><span class="Apple-converted-space">            </span>index = (index + 1) % answers.length;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/script&gt;</p>
+<p class="p1">&lt;/body&gt;</p>
+<p class="p1">&lt;/html&gt;</p>
+</body>
+</html>
